@@ -1,4 +1,4 @@
-# @bgevorkian/mssql-mcp
+# @iforge.it/mssql-mcp
 
 Minimal, unrestricted MCP server for Microsoft SQL Server.
 
@@ -21,7 +21,7 @@ Configure `.mcp.json` in your project root:
   "mcpServers": {
     "mssql": {
       "command": "npx",
-      "args": ["-y", "@bgevorkian/mssql-mcp"],
+      "args": ["-y", "@iforge.it/mssql-mcp"],
       "env": {
         "MSSQL_HOST": "localhost",
         "MSSQL_DATABASE": "mydb",
@@ -41,7 +41,7 @@ Configure `.mcp.json` in your project root:
   "mcpServers": {
     "mssql": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "@bgevorkian/mssql-mcp"],
+      "args": ["/c", "npx", "-y", "@iforge.it/mssql-mcp"],
       "env": {
         "MSSQL_HOST": "localhost",
         "MSSQL_DATABASE": "mydb",
@@ -57,7 +57,7 @@ Configure `.mcp.json` in your project root:
 ### Option 2: Global install
 
 ```bash
-npm install -g @bgevorkian/mssql-mcp
+npm install -g @iforge.it/mssql-mcp
 ```
 
 Then in `.mcp.json`:
@@ -82,7 +82,7 @@ Then in `.mcp.json`:
 ### Option 3: From source
 
 ```bash
-git clone https://github.com/bgevorkian/mssql-mcp.git
+git clone https://github.com/iforgeit/mssql-mcp.git
 cd mssql-mcp
 npm install
 ```

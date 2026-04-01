@@ -1,5 +1,5 @@
 {
-  "name": "@bgevorkian/mssql-mcp",
+  "name": "@iforge.it/mssql-mcp",
   "version": "1.0.0",
   "description": "Minimal unrestricted MCP server for Microsoft SQL Server. One tool — execute_sql — runs any SQL query without limitations.",
   "type": "module",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bgevorkian/mssql-mcp"
+    "url": "https://github.com/iforgeit/mssql-mcp"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
