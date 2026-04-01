@@ -116,6 +116,8 @@ Then in `.mcp.json`:
 | `MSSQL_USER` | Yes | — | SQL auth username |
 | `MSSQL_PASSWORD` | Yes | — | SQL auth password |
 | `MSSQL_PORT` | No | `1433` | SQL Server port |
+| `MSSQL_ENCRYPT` | No | `true` | Enable TLS encryption (`true`/`false`). Set to `false` only for local/trusted networks |
+| `MSSQL_TRUST_SERVER_CERTIFICATE` | No | `false` | Trust self-signed certificates (`true`/`false`). Enable for dev/local servers |
 
 You can use system environment variables with `${VAR_NAME}` syntax in `.mcp.json`:
 

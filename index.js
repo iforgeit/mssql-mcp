@@ -11,8 +11,8 @@ const config = {
   password: process.env.MSSQL_PASSWORD,
   port: parseInt(process.env.MSSQL_PORT || "1433"),
   options: {
-    encrypt: false,
-    trustServerCertificate: true,
+    encrypt: process.env.MSSQL_ENCRYPT !== "false",
+    trustServerCertificate: process.env.MSSQL_TRUST_SERVER_CERTIFICATE === "true",
   },
 };
 
@@ -27,7 +27,7 @@ async function getPool() {
 
 const server = new McpServer({
   name: "mssql",
-  version: "1.0.0",
+  version: "1.1.0",
 });
 
 server.tool(
@@ -55,7 +55,10 @@ server.tool(
         content: [{ type: "text", text: JSON.stringify({ rowCount: 0, rows: [], rowsAffected: result.rowsAffected, message: "OK" }, null, 2) }],
       };
     } catch (err) {
-      return { content: [{ type: "text", text: `Error: ${err.message}` }], isError: true };
+      const safeMessage = err.number
+        ? `SQL Error ${err.number}: ${err.message}`
+        : "Query execution failed. Check syntax and permissions.";
+      return { content: [{ type: "text", text: safeMessage }], isError: true };
     }
   }
 );

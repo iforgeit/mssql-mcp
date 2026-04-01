@@ -1,6 +1,6 @@
 {
   "name": "@iforge.it/mssql-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Minimal unrestricted MCP server for Microsoft SQL Server. One tool — execute_sql — runs any SQL query without limitations.",
   "type": "module",
   "bin": {
