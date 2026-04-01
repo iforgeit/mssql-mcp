@@ -1,0 +1,30 @@
+{
+  "name": "@bgevorkian/mssql-mcp",
+  "version": "1.0.0",
+  "description": "Minimal unrestricted MCP server for Microsoft SQL Server. One tool — execute_sql — runs any SQL query without limitations.",
+  "type": "module",
+  "bin": {
+    "mssql-mcp": "index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "mcp",
+    "mssql",
+    "sql-server",
+    "claude",
+    "model-context-protocol",
+    "database"
+  ],
+  "author": "bgevorkian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bgevorkian/mssql-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "mssql": "^11.0.1"
+  }
+}
